@@ -1,35 +1,43 @@
 body {
   background: transparent !important;
 }
+
+#controller {
+  position: relative;
+  width: 1920px;
+  height: 1080px;
+  background-image: url("https://ramune-milktea.github.io/saturn-pad/pad_base.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+/* ボタンテンプレート */
 .button {
   position: absolute;
-  width: 60px;
-  height: 60px;
-  background-color: rgba(255,255,255,0.2);
-  border-radius: 50%;
-  transition: background-color 0.1s ease;
+  width: 80px;
+  height: 80px;
+  background: none;
+  pointer-events: none;
 }
-.button.pressed {
-  background-color: rgba(0,200,255,0.8);
-}
+
+/* --- ボタン位置 & 押下時画像 --- */
 
 /* 十字キー */
-.button[data-button="12"] { left: 100px; top: 300px; } /* Up */
-.button[data-button="13"] { left: 100px; top: 360px; } /* Down */
-.button[data-button="14"] { left: 60px;  top: 330px; } /* Left */
-.button[data-button="15"] { left: 140px; top: 330px; } /* Right */
+.button[data-button="12"].pressed { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_Up.png");     background-size: contain; background-repeat: no-repeat; left: 180px; top: 370px; }
+.button[data-button="13"].pressed { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_Down.png");   background-size: contain; background-repeat: no-repeat; left: 180px; top: 470px; }
+.button[data-button="14"].pressed { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_Left.png");   background-size: contain; background-repeat: no-repeat; left: 130px; top: 420px; }
+.button[data-button="15"].pressed { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_Right.png");  background-size: contain; background-repeat: no-repeat; left: 230px; top: 420px; }
 
-/* 6ボタン配置 */
-.button[data-button="1"] { left: 400px; top: 280px; } /* A */
-.button[data-button="0"] { left: 320px; top: 330px; } /* B */
-.button[data-button="4"] { left: 480px; top: 330px; } /* C */
-.button[data-button="3"] { left: 400px; top: 330px; } /* X */
-.button[data-button="2"] { left: 320px; top: 380px; } /* Y */
-.button[data-button="5"] { left: 480px; top: 380px; } /* Z */
+/* ABXYZCボタン（右側6ボタン） */
+.button[data-button="1"].pressed  { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_A.png");      background-size: contain; background-repeat: no-repeat; left: 1550px; top: 450px; }
+.button[data-button="0"].pressed  { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_B.png");      background-size: contain; background-repeat: no-repeat; left: 1480px; top: 500px; }
+.button[data-button="4"].pressed  { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_C.png");      background-size: contain; background-repeat: no-repeat; left: 1620px; top: 500px; }
+.button[data-button="3"].pressed  { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_X.png");      background-size: contain; background-repeat: no-repeat; left: 1480px; top: 400px; }
+.button[data-button="2"].pressed  { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_Y.png");      background-size: contain; background-repeat: no-repeat; left: 1550px; top: 350px; }
+.button[data-button="5"].pressed  { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_Z.png");      background-size: contain; background-repeat: no-repeat; left: 1620px; top: 400px; }
 
-/* ショルダーボタン */
-.button[data-button="7"] { left: 200px; top: 180px; } /* LB */
-.button[data-button="8"] { left: 520px; top: 180px; } /* RB */
+/* ショルダー＆スタート */
+.button[data-button="7"].pressed  { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_LB.png");     background-size: contain; background-repeat: no-repeat; left: 300px; top: 200px; }
+.button[data-button="8"].pressed  { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_RB.png");     background-size: contain; background-repeat: no-repeat; left: 1580px; top: 200px; }
+.button[data-button="9"].pressed  { background-image: url("https://ramune-milktea.github.io/saturn-pad/Button_START.png");  background-size: contain; background-repeat: no-repeat; left: 960px; top: 520px; }
 
-/* スタート */
-.button[data-button="9"] { left: 310px; top: 450px; } /* Start */
