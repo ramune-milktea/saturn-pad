@@ -1,0 +1,35 @@
+body {
+  background: transparent !important;
+}
+.button {
+  position: absolute;
+  width: 60px;
+  height: 60px;
+  background-color: rgba(255,255,255,0.2);
+  border-radius: 50%;
+  transition: background-color 0.1s ease;
+}
+.button.pressed {
+  background-color: rgba(0,200,255,0.8);
+}
+
+/* 十字キー */
+.button[data-button="12"] { left: 100px; top: 300px; } /* Up */
+.button[data-button="13"] { left: 100px; top: 360px; } /* Down */
+.button[data-button="14"] { left: 60px;  top: 330px; } /* Left */
+.button[data-button="15"] { left: 140px; top: 330px; } /* Right */
+
+/* 6ボタン配置 */
+.button[data-button="1"] { left: 400px; top: 280px; } /* A */
+.button[data-button="0"] { left: 320px; top: 330px; } /* B */
+.button[data-button="4"] { left: 480px; top: 330px; } /* C */
+.button[data-button="3"] { left: 400px; top: 330px; } /* X */
+.button[data-button="2"] { left: 320px; top: 380px; } /* Y */
+.button[data-button="5"] { left: 480px; top: 380px; } /* Z */
+
+/* ショルダーボタン */
+.button[data-button="7"] { left: 200px; top: 180px; } /* LB */
+.button[data-button="8"] { left: 520px; top: 180px; } /* RB */
+
+/* スタート */
+.button[data-button="9"] { left: 310px; top: 450px; } /* Start */
